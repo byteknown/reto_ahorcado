@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ahorcado</title>
+</head>
+<body>
+       <div id="container">
+        <header id=cabecera>
+          <h1 class="titulo">AHORCADO</h1>        
+        </header>
+
+        <div id="contenido">
+          <div class="nombre">
+            <h3>¿Cómo te llamas?</h3>
+            <input id="name" type="text">
+            <button id="button" onclick="myName()">Registrar</button>
+            <p id="myName"></p>
+          </div>
+          <div class="dibujo"><img src="./public/1_pix.png" id="image"/></div>
+          <div class="palabraSecreta">
+            <p>Pulsa sobre las teclas para descubrir que hay detrás de Xarxatec Activa. Tienes 1 minuto.</p>
+            <p id="palabra"></p>
+          </div>
+        </div>
+
+        <div id="tecladoAlfabeto">
+          <div id="teclasTeclado">
+              <div class="fila1">
+                  <button type="button" class="tecla" id="teclaa" value="A" onclick="comprobarTecla('a');">A</button>
+                  <button type="button" class="tecla" id="teclab" value="B" onclick="comprobarTecla('b');">B</button>
+                  <button type="button" class="tecla" id="teclac" value="C" onclick="comprobarTecla('c');">C</button>
+                  <button type="button" class="tecla" id="teclad" value="D" onclick="comprobarTecla('d');">D</button>
+                  <button type="button" class="tecla" id="teclae" value="E" onclick="comprobarTecla('e');">E</button>
+                  <button type="button" class="tecla" id="teclaf" value="F" onclick="comprobarTecla('f');">F</button>
+                  <button type="button" class="tecla" id="teclag" value="G" onclick="comprobarTecla('g');">G</button>
+                  <button type="button" class="tecla" id="teclah" value="H" onclick="comprobarTecla('h');">H</button>
+                  <button type="button" class="tecla" id="teclai" value="I" onclick="comprobarTecla('i');">I</button>
+                  <button type="button" class="tecla" id="teclaj" value="J" onclick="comprobarTecla('j');">J</button>
+                  <button type="button" class="tecla" id="teclak" value="K" onclick="comprobarTecla('k');">K</button>
+                  <button type="button" class="tecla" id="teclal" value="L" onclick="comprobarTecla('l');">L</button>
+                  <button type="button" class="tecla" id="teclam" value="M" onclick="comprobarTecla('m');">M</button>
+              </div>
+              <div class="fila2">
+                  <button type="button" class="tecla" id="teclan" value="N" onclick="comprobarTecla('n');">N</button>
+                  <button type="button" class="tecla" id="teclañ" value="Ñ" onclick="comprobarTecla('ñ');">Ñ</button>
+                  <button type="button" class="tecla" id="teclao" value="O" onclick="comprobarTecla('o');">O</button>
+                  <button type="button" class="tecla" id="teclap" value="P" onclick="comprobarTecla('p');">P</button>
+                  <button type="button" class="tecla" id="teclaq" value="Q" onclick="comprobarTecla('q');">Q</button>
+                  <button type="button" class="tecla" id="teclar" value="R" onclick="comprobarTecla('r');">R</button>
+                  <button type="button" class="tecla" id="teclas" value="S" onclick="comprobarTecla('s');">S</button>
+                  <button type="button" class="tecla" id="teclat" value="T" onclick="comprobarTecla('t');">T</button>
+                  <button type="button" class="tecla" id="teclau" value="U" onclick="comprobarTecla('u');">U</button>
+                  <button type="button" class="tecla" id="teclav" value="V" onclick="comprobarTecla('v');">V</button>
+                  <button type="button" class="tecla" id="teclaw" value="W" onclick="comprobarTecla('w');">W</button>
+                  <button type="button" class="tecla" id="teclax" value="X" onclick="comprobarTecla('x');">X</button>
+                  <button type="button" class="tecla" id="teclay" value="Y" onclick="comprobarTecla('y');">Y</button>
+                  <button type="button" class="tecla" id="teclaz" value="Z" onclick="comprobarTecla('z');">Z</button>
+              </div>
+            </div>
+        </div>
+
+        <div id="marcador">
+          <h2 id="tituloMarcador">MARCADOR</h2>
+          <p id="fallos">FALLOS: 0</p>
+          <p id="aciertos">ACIERTOS: 0</p>
+          <p id="tiempo">TIEMPO: 60</p>
+          <P id="puntuacion">PUNTUACIÓN: 0</P>
+        </div>
+        <img id="winner" src="./public/winner.gif" >
+        <img id="loser" src="public/game_over.png">
+      </div>
+        <script src="./ahorcado.js"></script>
+</body>
+</html>
